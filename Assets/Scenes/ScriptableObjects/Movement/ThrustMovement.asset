@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e87fba8401747642b17949b42636343, type: 3}
-  m_Name: TopDownPlayerMovement
+  m_Script: {fileID: 11500000, guid: ea1d67643da2f174a88ba53456895c6a, type: 3}
+  m_Name: ThrustMovement
   m_EditorClassIdentifier: 
-  speed: 3
-  rotation: {fileID: 11400000, guid: 45525fb91eb2a284cabea9d27131d61a, type: 2}
+  thrust: 10
+  rotation: {fileID: 11400000, guid: 58995f14338f0c642a4a3fd21d063903, type: 2}
