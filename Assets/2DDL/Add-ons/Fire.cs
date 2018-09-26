@@ -87,8 +87,8 @@
 				if(chance > .5f) //Only happend in 50% chance
 				{
 
-					float descentralizationMag = Random.Range(-0.1f,0.1f) * .8f;
-
+                    //float descentralizationMag = Random.Range(-0.1f,0.1f) * .8f;
+                    float descentralizationMag = rnd;
 					//Offset pos
 					_deltaPos = new Vector2(_deltaPos.x + descentralizationMag, _deltaPos.y + descentralizationMag);
 					transform.localPosition = new Vector3(_deltaPos.x, _deltaPos.y, _initPos.z);
