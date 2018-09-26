@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: TopDownPlayerMovement
   m_EditorClassIdentifier: 
   speed: 3
-  rotation: {fileID: 11400000, guid: 58995f14338f0c642a4a3fd21d063903, type: 2}
+  rotation: {fileID: 11400000, guid: 45525fb91eb2a284cabea9d27131d61a, type: 2}
