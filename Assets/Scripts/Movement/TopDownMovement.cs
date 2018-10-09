@@ -24,6 +24,7 @@ public class TopDownMovement : Movement {
         //Debug.Log(name + ": movement: " + movement);
         body.MovePosition(body.position + movement);
 
-        rotation.Turn(movableObject);
+        if(rotation)
+            rotation.Turn(movableObject);
     }
 }
