@@ -1,23 +1,14 @@
 fileFormatVersion: 2
-guid: 7438540321218b042805dc65d195ff2b
+guid: d24bc1cbb3727294b9a079e8edbd710b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: minotaur1024sheet 1_0
-    21300002: minotaur1024sheet 1_1
-    21300004: minotaur1024sheet 1_2
-    21300006: minotaur1024sheet 1_3
-    21300008: minotaur1024sheet 1_4
-    21300010: minotaur1024sheet 1_5
-    21300012: minotaur1024sheet 1_6
-    21300014: minotaur1024sheet 1_7
-    21300016: minotaur1024sheet 1_8
-    21300018: minotaur1024sheet 1_9
-    21300020: minotaur1024sheet 1_10
-    21300022: minotaur1024sheet 1_11
-    21300024: minotaur1024sheet 1_12
-    21300026: minotaur1024sheet 1_13
-    21300028: minotaur1024sheet 1_14
-    21300030: minotaur1024sheet 1_15
+    21300000: torch_0
+    21300002: torch_1
+    21300004: torch_2
+    21300006: torch_3
+    21300008: torch_4
+    21300010: torch_5
+    21300012: torch_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -122,201 +113,141 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: minotaur1024sheet 1_0
+      name: torch_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 2045
-        width: 870
-        height: 1030
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9dcc8bf5d4ace84c983c5f1eca3a1ca
+      spriteID: 761e19f5da723a248a74b3685ddc10de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaur1024sheet 1_1
+      name: torch_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 3069
-        width: 838
-        height: 1027
+        x: 1020
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc81616357292744daff98fdfcd31a8d
+      spriteID: 200970410788b664ca55467c9531b8ce
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaur1024sheet 1_2
+      name: torch_2
       rect:
         serializedVersion: 2
-        x: 1053
-        y: 2045
-        width: 870
-        height: 2051
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef27688c56b0fec45b7be51aa1b7634e
+      spriteID: 84e727b7eb458ad4cb6686912deb095d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaur1024sheet 1_3
+      name: torch_3
       rect:
         serializedVersion: 2
-        x: 2077
-        y: 2045
-        width: 870
-        height: 2051
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b04f27e0035666e44875cc2094d0a488
+      spriteID: b91d1bb6c3539864d95a7fba78354511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaur1024sheet 1_4
+      name: torch_4
       rect:
         serializedVersion: 2
-        x: 3133
-        y: 2045
-        width: 838
-        height: 2051
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3006ae5b87598f04283636a6d5d068a6
+      spriteID: 22f50f805d491284a9a697beb42e4be3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: minotaur1024sheet 1_5
+      name: torch_5
       rect:
         serializedVersion: 2
-        x: 125
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639d8ae80ef55374f8cf2c58432c9b68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torch_6
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 838
-        height: 2051
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8165211689fe0df4685a153040e36d7f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaur1024sheet 1_6
-      rect:
-        serializedVersion: 2
-        x: 1149
-        y: 0
-        width: 838
-        height: 2051
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83c270f4ef865244480026cb65a8574f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaur1024sheet 1_7
-      rect:
-        serializedVersion: 2
-        x: 2173
-        y: 0
-        width: 870
-        height: 2051
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 176ca983e48e5a54c985dc47ba550665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaur1024sheet 1_8
-      rect:
-        serializedVersion: 2
-        x: 3133
-        y: 0
-        width: 838
-        height: 1027
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 011e182ec51e9ba45840d1ff6b7334de
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: minotaur1024sheet 1_9
-      rect:
-        serializedVersion: 2
-        x: 3197
-        y: 1021
-        width: 870
-        height: 1030
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7789f73a6abc7b34daddab58d2bdc7ef
+      spriteID: c0ce3103bba201c44a46e20276c09e89
       vertices: []
       indices: 
       edges: []
@@ -324,7 +255,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5f3fc1b272ef0a84cb53c7d6b7605cc6
+    spriteID: b1aaf5c9c6251ad4288567c87df24eea
     vertices: []
     indices: 
     edges: []

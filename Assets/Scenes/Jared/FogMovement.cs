@@ -15,8 +15,8 @@ public class FogMovement : MonoBehaviour {
     void Start () {
         speed = .3f;
         frames = 20;
-        body.position = new Vector2(Random.Range(leftBound.x, rightBound.x), 
-                                    Random.Range(leftBound.y, rightBound.y));
+        //body.position = new Vector2(Random.Range(leftBound.x, rightBound.x), 
+          //                          Random.Range(leftBound.y, rightBound.y));
         if (Random.value > .5f)
             direction = Vector2.up;
         else

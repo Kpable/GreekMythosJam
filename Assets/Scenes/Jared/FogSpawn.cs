@@ -12,7 +12,7 @@ public class FogSpawn : MonoBehaviour {
         {
             var cloud = (GameObject) Instantiate(
                 cloudPrefab,
-                transform.position * Random.insideUnitCircle,
+                transform.position + new Vector3(Random.insideUnitCircle.x,Random.insideUnitCircle.y, 0),
                 transform.rotation
             );
 
