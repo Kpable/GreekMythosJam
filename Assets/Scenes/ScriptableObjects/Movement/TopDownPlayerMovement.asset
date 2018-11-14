@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e87fba8401747642b17949b42636343, type: 3}
   m_Name: TopDownPlayerMovement
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 8.87
   rotation: {fileID: 0}
