@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ public class CloudMovement : MonoBehaviour {
     {
         if (frames <= 1 && toggleWait == false)
         {
-            switch (Random.Range(0, 4))
+            switch (UnityEngine.Random.Range(0, 4))
             {
                 case 0:
                     direction = Vector2.up;
@@ -61,5 +62,10 @@ public class CloudMovement : MonoBehaviour {
             frames--;
             toggleWait = false;
         }
+    }
+
+    public void Disappear()
+    {
+        DestroyImmediate(this, true);
     }
 }

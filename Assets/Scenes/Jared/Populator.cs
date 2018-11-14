@@ -20,9 +20,8 @@ public class Populator : MonoBehaviour {
         {
             var fogSpawner = (GameObject) Instantiate(
                 fogSpawnerPrefab,
-                new Vector3(Random.Range(leftBound.x, rightBound.x),
-                            Random.Range(highBound.y, lowBound.y),
-                            0),
+                new Vector3(Random.Range(Camera.main.ScreenToViewportPoint(leftBound).x, Camera.main.ScreenToViewportPoint(rightBound).x),
+                            Random.Range(Camera.main.ScreenToViewportPoint(lowBound).y, Camera.main.ScreenToViewportPoint(highBound).y)),
                 transform.rotation
             );
         }
