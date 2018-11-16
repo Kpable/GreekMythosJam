@@ -107,6 +107,9 @@ MonoBehaviour:
     type: 2}
   cloudPrefab: {fileID: 0}
   spawnerPrefab: {fileID: 0}
+  sacrificeCount: 0
+  torchCount: 0
+  MAX_SACRIFICE: 10
 --- !u!114 &114976093088120762
 MonoBehaviour:
   m_ObjectHideFlags: 1

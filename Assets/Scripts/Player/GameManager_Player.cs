@@ -11,11 +11,11 @@ public class GameManager_Player : MonoBehaviour {
     public GameObject spawnerPrefab;
 
     // Player Stats
-    private int sacrificeCount = 0;
-    private int torchCount = 0;
+    public int sacrificeCount = 0;
+    public int torchCount = 0;
 
     // Constants
-    private const int MAX_SACRIFICE = 10;
+    public int MAX_SACRIFICE = 10;
 
     // Use this for initialization
     void Start () {
@@ -24,7 +24,10 @@ public class GameManager_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(sacrificeCount >= MAX_SACRIFICE)
+        {
+            print("PLAYER VICTORY");
+        }
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
