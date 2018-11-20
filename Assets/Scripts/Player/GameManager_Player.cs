@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager_Player : MonoBehaviour {
 
@@ -27,6 +28,7 @@ public class GameManager_Player : MonoBehaviour {
         if(sacrificeCount >= MAX_SACRIFICE)
         {
             print("PLAYER VICTORY");
+            SceneManager.LoadScene("End Game");
         }
 	}
 
@@ -44,10 +46,13 @@ public class GameManager_Player : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("ENTER TRIGGER");
-        if (collision.gameObject.tag == cloudPrefab.tag)
+        if (cloudPrefab != null)
         {
-            print("PLAYER COLLIDE WITH SPAWNER");
-            Destroy(collision.gameObject);
+            if (collision.gameObject.tag == cloudPrefab.tag)
+            {
+                print("PLAYER COLLIDE WITH SPAWNER");
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
