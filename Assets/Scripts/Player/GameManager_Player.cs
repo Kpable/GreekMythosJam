@@ -13,6 +13,8 @@ public class GameManager_Player : MonoBehaviour {
 
     // Player Stats
     public int sacrificeCount = 0;
+    public int sacrificeLimit;
+    public int sacrificesSaved = 0;
     public int torchCount = 0;
 
     // Constants
@@ -32,26 +34,28 @@ public class GameManager_Player : MonoBehaviour {
         }
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("ENTER COLLISION");
-        if (collision.gameObject.tag == sacrificePrefab.tag)
+        print("ENTER TRIGGER");
+
+        if (collision.gameObject.tag == sacrificePrefab.tag && sacrificeCount < sacrificeLimit)
         {
             print("PLAYER COLLIDE WITH SACRIFICE");
             sacrificeCount++;
             Destroy(collision.gameObject);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        print("ENTER TRIGGER");
-        if (cloudPrefab != null)
+        else if (cloudPrefab != null && (collision.gameObject.tag == cloudPrefab.tag))
         {
-            if (collision.gameObject.tag == cloudPrefab.tag)
+            print("PLAYER COLLIDE WITH SPAWNER");
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "Haven")
+        {
+            if(sacrificeCount > 0)
             {
-                print("PLAYER COLLIDE WITH SPAWNER");
-                Destroy(collision.gameObject);
+                sacrificesSaved += sacrificeCount;
+                sacrificeLimit++;
+                sacrificeCount = 0;
             }
         }
     }

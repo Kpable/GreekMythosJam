@@ -6,13 +6,17 @@ using UnityEngine.UI;
 public class GameManager_UI : MonoBehaviour {
 
     public GameManager_Player playerManager;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private Text[] lines;
+
+    // Use this for initialization
+    void Start () {
+        lines = GetComponentsInChildren<Text>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponentInChildren<Text>().text = "Sacrifices Found: " + playerManager.sacrificeCount;
-	}
+        lines[0].text = "Sacrifices Following: " + playerManager.sacrificeCount;
+        lines[1].text = "Follower Capacity: " + playerManager.sacrificeLimit;
+        lines[2].text = "Sacrifices Saved: " + playerManager.sacrificesSaved;
+    }
 }
