@@ -27,7 +27,7 @@ public class GameManager_Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(sacrificeCount >= MAX_SACRIFICE)
+        if(sacrificesSaved >= MAX_SACRIFICE)
         {
             print("PLAYER VICTORY");
             SceneManager.LoadScene("End Game");
