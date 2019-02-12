@@ -442,20 +442,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 212871277628869570, guid: addc7bbca9997044db9c7e96b6241873,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1449268350018168, guid: addc7bbca9997044db9c7e96b6241873, type: 2}
-      propertyPath: m_Name
-      value: MinoanF (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 58775902159988206, guid: addc7bbca9997044db9c7e96b6241873,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114855983608551998, guid: addc7bbca9997044db9c7e96b6241873,
         type: 2}
       propertyPath: walls
@@ -466,6 +452,10 @@ Prefab:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 690296272}
+    - target: {fileID: 1449268350018168, guid: addc7bbca9997044db9c7e96b6241873, type: 2}
+      propertyPath: m_Name
+      value: MinoanF (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addc7bbca9997044db9c7e96b6241873, type: 2}
   m_IsPrefabAsset: 0
@@ -8432,6 +8422,11 @@ Prefab:
     - target: {fileID: 1449268350018168, guid: addc7bbca9997044db9c7e96b6241873, type: 2}
       propertyPath: m_Name
       value: MinoanF (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855983608551998, guid: addc7bbca9997044db9c7e96b6241873,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addc7bbca9997044db9c7e96b6241873, type: 2}
