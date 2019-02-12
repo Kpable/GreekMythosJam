@@ -19,10 +19,16 @@ public class NpcMovement : MonoBehaviour {
 
     Vector3 targetPosition;
     bool movingTowardsPosition = false;
+    public bool following = false;
+    public GameObject followTarget;
+    public bool collected = false;
+    public GameObject followerChild;
+    CircleCollider2D targetCollider;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
+        followerChild = transform.GetChild(0).gameObject;
     }
 
     private void FindOpenPositions()
@@ -67,10 +73,24 @@ public class NpcMovement : MonoBehaviour {
                 movingTowardsPosition = false;
             }
         }
+        else if (following && followTarget && targetCollider)
+        {
+            if (!GetComponent<CircleCollider2D>().IsTouching(targetCollider))
+            {
+                float step = MovementSpeed * Time.deltaTime;
+                transform.position = Vector2.MoveTowards(transform.position, followTarget.transform.position, step);
+            }
+        }
         else
         {
             FindOpenPositions();
 
         }
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        followTarget = target;
+        targetCollider = target.GetComponent<CircleCollider2D>();
     }
 }

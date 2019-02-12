@@ -10,19 +10,24 @@ public class GameManager_Player : MonoBehaviour {
     public GameObject sacrificePrefab;
     public GameObject cloudPrefab;
     public GameObject spawnerPrefab;
+    GameObject followerChild;
 
     // Player Stats
-    public int sacrificeCount = 0;
-    public int sacrificeLimit;
-    public int sacrificesSaved = 0;
     public int torchCount = 0;
 
     // Constants
     public int MAX_SACRIFICE = 10;
 
+    // Sacrifices
+    List<NpcMovement> followers;
+    public int sacrificeCount = 0;
+    public int sacrificeLimit;
+    public int sacrificesSaved = 0;
+
     // Use this for initialization
     void Start () {
-		
+        followers = new List<NpcMovement>();
+        followerChild = transform.GetChild(0).gameObject;
 	}
 	
 	// Update is called once per frame
@@ -38,16 +43,20 @@ public class GameManager_Player : MonoBehaviour {
     {
         print("ENTER TRIGGER");
 
-        if (collision.gameObject.tag == sacrificePrefab.tag && sacrificeCount < sacrificeLimit)
+        if (collision.gameObject.tag == sacrificePrefab.tag )//&& sacrificeCount < sacrificeLimit)
         {
-            print("PLAYER COLLIDE WITH SACRIFICE");
-            sacrificeCount++;
-            Destroy(collision.gameObject);
+            NpcMovement sacrificeMover = collision.gameObject.GetComponent<NpcMovement>();
+            if (sacrificeMover && !sacrificeMover.collected)
+            {
+                print("PLAYER COLLIDE WITH SACRIFICE");
+                AddFollower(sacrificeMover);
+            }
+
         }
         else if (cloudPrefab != null && (collision.gameObject.tag == cloudPrefab.tag))
         {
             print("PLAYER COLLIDE WITH SPAWNER");
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Haven")
         {
@@ -56,7 +65,29 @@ public class GameManager_Player : MonoBehaviour {
                 sacrificesSaved += sacrificeCount;
                 sacrificeLimit++;
                 sacrificeCount = 0;
+                foreach( NpcMovement sacrifice in followers)
+                {
+                    Destroy(sacrifice.gameObject);
+                }
+                followers.Clear();
             }
         }
+    }
+
+    private void AddFollower(NpcMovement sacrifice)
+    {
+        sacrificeCount++;
+        sacrifice.following = true;
+        sacrifice.collected = true;
+        if(followers.Count != 0)
+        {
+            sacrifice.SetTarget(followers[followers.Count - 1].followerChild);
+        }
+        else
+        {
+            sacrifice.SetTarget(followerChild);
+        }
+        followers.Add(sacrifice);
+
     }
 }

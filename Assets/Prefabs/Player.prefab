@@ -11,6 +11,22 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1171453239841616}
   m_IsPrefabAsset: 1
+--- !u!1 &1146611451666774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4716328127185552}
+  - component: {fileID: 58407650894165066}
+  m_Layer: 0
+  m_Name: FollowerRadius
+  m_TagString: Follower
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1171453239841616
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,8 +56,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.2, y: 7.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4716328127185552}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4716328127185552
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146611451666774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4077249387716308}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50515861099287568
@@ -64,6 +94,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58407650894165066
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146611451666774}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5
 --- !u!58 &58639397721885278
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -93,8 +138,10 @@ MonoBehaviour:
   playerBody: {fileID: 50515861099287568}
   sacrificePrefab: {fileID: 1449268350018168, guid: addc7bbca9997044db9c7e96b6241873,
     type: 2}
-  cloudPrefab: {fileID: 0}
-  spawnerPrefab: {fileID: 0}
+  cloudPrefab: {fileID: 1166425681851442, guid: 4f0588a57c308234e8e1aba2f01a3cc7,
+    type: 2}
+  spawnerPrefab: {fileID: 1141259828951518, guid: 51f05c17d8a9c074baf6822ce678a370,
+    type: 2}
   sacrificeCount: 0
   sacrificeLimit: 1
   sacrificesSaved: 0
