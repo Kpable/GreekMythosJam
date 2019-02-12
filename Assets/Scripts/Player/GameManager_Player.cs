@@ -53,11 +53,6 @@ public class GameManager_Player : MonoBehaviour {
             }
 
         }
-        else if (cloudPrefab != null && (collision.gameObject.tag == cloudPrefab.tag))
-        {
-            print("PLAYER COLLIDE WITH SPAWNER");
-            //Destroy(collision.gameObject);
-        }
         else if (collision.gameObject.tag == "Haven")
         {
             if(sacrificeCount > 0)

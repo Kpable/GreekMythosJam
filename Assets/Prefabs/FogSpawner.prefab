@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 58298268993013834}
   m_Layer: 0
   m_Name: FogSpawner
-  m_TagString: Untagged
+  m_TagString: cloud_tag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

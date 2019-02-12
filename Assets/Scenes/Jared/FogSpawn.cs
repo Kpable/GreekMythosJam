@@ -10,6 +10,7 @@ public class FogSpawn : MonoBehaviour
     private bool isEnabled;
     private bool isSpawned;
     private List<GameObject> clouds;
+    private float timer = 100;
 
     // Use this for initialization
     void Start()
@@ -27,6 +28,14 @@ public class FogSpawn : MonoBehaviour
             if (isSpawned == false)
             {
                 Spawn();
+            }
+        }
+        else
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                Reappear();
             }
         }
     }
@@ -53,9 +62,22 @@ public class FogSpawn : MonoBehaviour
         isSpawned = true;
     }
 
-    public void Appear()
+    public void Disappear()
     {
-        isEnabled = true;
+        isEnabled = false;
+        foreach (GameObject cloud in clouds)
+        {
+            cloud.GetComponent<CloudMovement>().Disappear();
+        }
     }
 
+    public void Reappear()
+    {
+        isEnabled = true;
+        foreach (GameObject cloud in clouds)
+        {
+            cloud.GetComponent<CloudMovement>().Reappear();
+        }
+
+    }
 }

@@ -34,7 +34,8 @@ public class Populator : MonoBehaviour {
         finalBounds.x = Random.Range(leftBound, rightBound);
         finalBounds.y = Random.Range(highBound, lowBound);
 
-        while(finalBounds.x <= (safeHaven.transform.position.x + safeHaven.size.x/2) &&
+        /*Removing due to new torchc logic
+         * while(finalBounds.x <= (safeHaven.transform.position.x + safeHaven.size.x/2) &&
             finalBounds.x >= (safeHaven.transform.position.x - safeHaven.size.x / 2))
         {
             finalBounds.x = Random.Range(leftBound, rightBound);
@@ -44,7 +45,7 @@ public class Populator : MonoBehaviour {
            finalBounds.y >= (safeHaven.transform.position.y - safeHaven.size.y / 2))
         {
             finalBounds.y = Random.Range(highBound, lowBound);
-        }
+        }*/
 
         return finalBounds;
     }

@@ -11,6 +11,7 @@ public class CloudMovement : MonoBehaviour {
     private int frames;
     public int FRAME_MAX = 30;
     private bool toggleWait;
+    private bool disabled;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +23,7 @@ public class CloudMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         Random360();
+        Fade();
 	}
 
     void Random360()
@@ -66,6 +68,37 @@ public class CloudMovement : MonoBehaviour {
 
     public void Disappear()
     {
-        DestroyImmediate(this, true);
+        disabled = true;
+    }
+
+    public void Reappear()
+    {
+        disabled = false;
+    }
+
+    /** <summary>
+     * Fades the alpha value for the sprite in/out. Executes in Update()
+     * True => fade in; False => fade in</summary> */
+    public void Fade()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        Color tmpColor = sprite.color;
+
+        if (disabled == false) // Fade in, or stop if complete.
+        {
+            if (sprite.color.a < 1f)
+            {
+                tmpColor.a += .05f;
+                sprite.color = tmpColor;
+            }
+        }
+        else // Fade out, stop when complete
+        {
+            if(sprite.color.a > 0f)
+            {
+                tmpColor.a -= .05f;
+                sprite.color = tmpColor;
+            }
+        }
     }
 }
